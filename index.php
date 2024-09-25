@@ -15,14 +15,7 @@
            echo $nombre." ".$asignatura." ".$estado;
         ?>
     </h1>
-    <h2> Utilizando multiple checkbox</h2>
-    <br>
-    <h3>
-        <?php
-            foreach($_POST['materias'] as $materia){
-                echo $materia."<br>";
-            } 
-        ?>
-    </h3>
+   
+    
 </body>
 </html>

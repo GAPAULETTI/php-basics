@@ -1,5 +1,16 @@
 <?php
-    if($_POST['usuario']=="Gaston" && $_POST['clave']=="1234"){
+        # Validacion
+        if(!preg_match("/^[a-zA-Z]{3,10}$/",$_POST['usuario'])){
+            echo "El usuario no coincide con el formato";
+            exit();
+        }
+        
+        if(!preg_match("/^[a-zA-Z0-9$@.-]{4,30}$/",$_POST['clave'])){
+            echo "Clave no permitida";
+            exit();
+        }
+        
+        if($_POST['usuario']=="Gaston" && $_POST['clave']=="1234"){
 
         session_name("Login");
         session_start();
